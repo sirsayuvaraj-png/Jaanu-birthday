@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Jaanu 🖤</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090709;
+    color: #f8eaf0;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 22px;
+    background:
+        radial-gradient(ellipse at 50% 10%,
+        #521b35 0%, #210e19 42%, #090709 85%);
+}
+
+.content {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    font-size: 10px;
+    color: #d7a0b6;
+    letter-spacing: 4px;
+    line-height: 2;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 11vw, 72px);
+    font-weight: normal;
+    color: #f3c4d7;
+    margin: 25px 0;
+    text-shadow: 0 0 35px #d45d9140;
+    line-height: 1.2;
+}
+
+p {
+    color: #d7c6cf;
+    font-size: 15px;
+    line-height: 2;
+    margin: 15px 0;
+}
+
+.primary-btn {
+    border: 1px solid #e6b4c9;
+    background: #d9a0b7;
+    color: #1a0912;
+    padding: 15px 25px;
+    border-radius: 30px;
+    margin-top: 28px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.primary-btn:active {
+    transform: scale(0.96);
+}
+
+.primary-btn:hover {
+    background: #f5ccdc;
+}
+
+section:not(.hero) {
+    padding: 75px 22px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.divider {
+    height: 1px;
+    width: 65px;
+    background: #c17a99;
+    margin: 28px auto;
+}
+
+h2 {
+    font-size: 27px;
+    font-weight: normal;
+    color: #edb8ce;
+    margin-bottom: 20px;
+}
+
+.birthday {
+    background:
+        radial-gradient(ellipse at top, #29101d, #090709 75%);
+}
+
+.birthday h1 {
+    color: #f0c1d4;
+    font-size: clamp(38px, 10vw, 60px);
+    font-weight: normal;
+    line-height: 1.25;
+    margin: 25px 0;
+}
+
+.card {
+    background: #ffffff06;
+    border: 1px solid #d9a0b720;
+    border-radius: 20px;
+    padding: 28px 22px;
+    margin: 25px auto;
+    box-shadow: 0 15px 50px #00000030;
+}
+
+.letter-section {
+    background: #0c080b;
+}
+
+.final-section {
+    background:
+        radial-gradient(ellipse at bottom, #321222, #090709 75%);
+}
+
+.big-heart {
+    font-size: 50px;
+    color: #d99ab4;
+    margin: 20px 0;
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -40px;
+    z-index: 5;
+    pointer-events: none;
+    color: #e4a2bd;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(40deg);
+        opacity: 0;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #9f7f8e;
+    line-height: 2.5;
+}
+
+.signature {
+    color: #e5afc5;
+    margin-top: 25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- OPENING SCREEN -->
+
+<section class="hero" id="opening">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            A LITTLE SURPRISE FOR YOU
+        </div>
+
+        <h1>
+            Hey,<br>
+            Jaanu. 🖤
+        </h1>
+
+        <p>
+            Maine tumhare liye kuch special banaya hai...
+            <br>
+            Ek chhoti si duniya, sirf tumhare liye.
+        </p>
+
+        <div class="divider"></div>
+
+        <p>
+            Ready for your little surprise?
+        </p>
+
+        <button class="primary-btn" onclick="startSurprise()">
+            OPEN YOUR SURPRISE ♡
+        </button>
+
+        <p class="eyebrow" style="margin-top:45px">
+            MADE WITH LOVE
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- BIRTHDAY SCREEN -->
+
+<section class="birthday hidden" id="birthday">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            3 NOVEMBER · YOUR SPECIAL DAY
+        </div>
+
+        <h1>
+            Happy Birthday,<br>
+            Tapasya 🥀
+        </h1>
+
+        <div class="big-heart">♡</div>
+
+        <p>
+            Aaj ka din special hai,
+            <br>
+            kyunki aaj tumhara birthday hai.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="card">
+
+            <h2>To My Favourite Person 🌙</h2>
+
+            <p>
+                Duniya mein bahut saare log milte hain,
+                lekin kuch log apni ek alag jagah
+                bana lete hain.
+            </p>
+
+            <p>
+                Tum unhi special logon mein se ek ho.
+                Tumhari smile, tumhari baatein aur
+                tumhare saath bitaye hue moments
+                mere liye precious hain.
+            </p>
+
+            <p>
+                Aaj tumhare birthday par meri wish hai
+                ki tumhari life happiness, peace aur
+                beautiful memories se bhari rahe.
+            </p>
+
+            <p>
+                May this new chapter bring you closer
+                to all your dreams. 🤍
+            </p>
+
+        </div>
+
+        <button class="primary-btn"
+        onclick="goToLetter()">
+            THERE'S MORE FOR YOU ↓
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PERSONAL LETTER -->
+
+<section class="letter-section hidden" id="letterSection">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            SOMETHING FROM MY HEART
+        </div>
+
+        <h2>A Letter for My Jaanu 💌</h2>
+
+        <p>
+            Kuch baatein words mein kehna
+            thoda mushkil hota hai...
+            <br>
+            Toh aaj unhe likh deta hoon.
+        </p>
+
+        <button class="primary-btn"
+        onclick="openLetter()">
+            OPEN YOUR LETTER 🖤
+        </button>
+
+        <div class="card hidden" id="letter">
+
+            <h2>Dear Jaanu, ♡</h2>
+
+            <p>
+                Happy Birthday, meri Jaanu. ❤️
+            </p>
+
+            <p>
+                Pata hai, main har baar words mein explain
+                nahi kar pata ki tum mere liye kitni special ho.
+                But aaj main chahta hoon ki tumhe pata chale
+                ki tumhari happiness mere liye kitni matter karti hai.
+            </p>
+
+            <p>
+                Tumhari smile, tumhari baatein aur tumhare
+                saath bitaye chhote-chhote moments mere liye
+                precious hain.
+            </p>
+
+            <p>
+                Main dil se wish karta hoon ki tumhare saare
+                dreams poore hon, tum life mein bahut aage badho
+                aur tumhe hamesha khush rehne ki wajah mile.
+            </p>
+
+            <p>
+                I hope this year brings you beautiful surprises,
+                new opportunities and countless reasons to smile.
+            </p>
+
+            <p>
+                Hamesha apna khayal rakhna, apne dreams ke
+                peeche jaana aur kabhi mat bhoolna ki tum
+                apni jagah bahut special ho.
+            </p>
+
+            <p>
+                Aaj tumhara din hai, toh khul kar smile karna,
+                apni favourite cheezein karna aur har moment
+                enjoy karna.
+            </p>
+
+            <div class="divider"></div>
+
+            <h2>Happy Birthday, Jaanu. 🖤</h2>
+
+            <p class="signature">
+                With lots of love,<br>
+                Always wishing the best for you. ♡
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL SURPRISE -->
+
+<section class="final-section hidden" id="finalSection">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            ONE LAST THING...
+        </div>
+
+        <h2 style="margin-top:25px">
+            Your Little Universe 🌙
+        </h2>
+
+        <p>
+            Yeh chhoti si website ek simple sa gift hai,
+            lekin iske peeche ek special thought hai:
+            tumhara birthday thoda aur memorable banana.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="big-heart">♡</div>
+
+        <p>
+            Happy Birthday once again, Jaanu.
+            <br>
+            Keep smiling. Keep dreaming.
+            <br>
+            Stay wonderfully you. 🥀
+        </p>
+
+        <button class="primary-btn"
+        onclick="sendLove()">
+            SEND SOME LOVE ✨
+        </button>
+
+        <p id="loveMessage" class="hidden">
+            A little love, a thousand virtual hearts. 🖤
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+    A LITTLE CORNER OF THE INTERNET<br>
+    MADE ESPECIALLY FOR TAPASYA ♡<br>
+    3 NOVEMBER
+</footer>
+
+
+<script>
+
+function startSurprise() {
+
+    document.getElementById("opening").classList.add("hidden");
+
+    document.getElementById("birthday").classList.remove("hidden");
+
+    document.getElementById("letterSection").classList.remove("hidden");
+
+    document.getElementById("finalSection").classList.remove("hidden");
+
+    createHearts(20);
+
+    window.scrollTo(0, 0);
+}
+
+function goToLetter() {
+
+    document.getElementById("letterSection").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+function openLetter() {
+
+    document.getElementById("letter").classList.remove("hidden");
+
+    createHearts(15);
+
+    setTimeout(function() {
+
+        document.getElementById("letter").scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }, 100);
+
+}
+
+function sendLove() {
+
+    document.getElementById("loveMessage").classList.remove("hidden");
+
+    createHearts(35);
+
+}
+
+function createHearts(count) {
+
+    for (let i = 0; i < count; i++) {
+
+        let heart = document.createElement("div");
+
+        heart.className = "floating-heart";
+
+        heart.innerHTML = Math.random() > 0.5 ? "♡" : "♥";
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+            (14 + Math.random() * 24) + "px";
+
+        heart.style.animationDuration =
+            (4 + Math.random() * 5) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(function() {
+            heart.remove();
+        }, 10000);
+
+    }
+
+}
+
+</script>
+
+</body>
+  </html>
